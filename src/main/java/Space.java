@@ -15,4 +15,8 @@ public abstract class Space {
     public Car getCar() {
         return car;
     };
+
+    public void park(Car car) {
+        this.car = car;
+    };
 }

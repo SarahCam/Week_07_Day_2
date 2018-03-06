@@ -15,25 +15,25 @@ public class StandardSpaceTest {
     }
 
     @Test
-    public void canGetNumber() {
+    public void canGetCarRegistrationNumber() {
         assertEquals(1, standardSpace.getNumber());
     }
 
     @Test
-    public void canGetType() {
+    public void canGetParkingSpaceType() {
         assertEquals(Type.STANDARD, standardSpace.getType());
     }
 
     @Test
-    public void canGetCar___Returns_null_whenSpaceIsEmpty() {
+    public void canGetCarWhichIsParkedInParkingSpace___getCar_returns_null_whenSpaceIsEmpty() {
         assertEquals(null, standardSpace.getCar());
     }
 
-    //    @Test
-//    public void canParkCarInSpace() {
-//        standardSpace.park(standardCar);
-//        assertEquals(standardCar, standardSpace.getCar());
-//    }
+    @Test
+    public void canParkCarInParkingSpace___getCar_returns_CarInstance_whenSpaceIsFull() {
+        standardSpace.park(standardCar);
+        assertEquals(standardCar, standardSpace.getCar());
+    }
 
     //    @Test
 //    public void canCheckIsEmpty() {
