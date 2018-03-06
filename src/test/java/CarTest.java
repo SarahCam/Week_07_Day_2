@@ -16,4 +16,9 @@ public class CarTest {
     public void canGetRegistration() {
         assertEquals("AH65 ZZZ", standardCar.getRegistration());
     }
+
+    @Test
+    public void canGetType() {
+        assertEquals(Type.STANDARD, standardCar.getType());
+    }
 }
