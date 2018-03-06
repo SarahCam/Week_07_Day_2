@@ -16,4 +16,10 @@ public class StandardSpaceTest {
     public void canGetNumber() {
         assertEquals(1, standardSpace.getNumber());
     }
+
+    @Test
+    public void canGetType() {
+        assertEquals(SpaceType.STANDARD, standardSpace.getType());
+    }
+
 }
