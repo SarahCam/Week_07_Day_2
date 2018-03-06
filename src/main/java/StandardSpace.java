@@ -1,13 +1,7 @@
-public class StandardSpace {
-
-    private int number;
+public class StandardSpace extends Space {
 
     public StandardSpace(int number) {
-        this.number = number;
+        super(number);
     }
 
-
-    public int getNumber() {
-        return number;
-    }
 }
