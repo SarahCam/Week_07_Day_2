@@ -25,18 +25,20 @@ public class StandardSpaceTest {
     }
 
     @Test
-    public void canGetCarWhichIsParkedInParkingSpace___getCar_returns_null_whenSpaceIsEmpty() {
+    public void canGetCarParkedInParkingSpace___NULL_WHEN_SPACE_EMPTY() {
         assertEquals(null, standardSpace.getCar());
     }
 
     @Test
-    public void canParkCarInParkingSpace___getCar_returns_CarInstance_whenSpaceIsFull() {
-        standardSpace.park(standardCar);
+    public void canParkCarInParkingSpace() {
+        int time = 1000;                        // For simplicity, time is an int where each digit reps HHMM
+        standardSpace.park(standardCar, time);
         assertEquals(standardCar, standardSpace.getCar());
+        assertEquals(time, standardSpace.getParkTime());
     }
 
-    //    @Test
-//    public void canCheckIsEmpty() {
-//        assertEquals(true, standardSpace.isEmpty());
-//    }
+        @Test
+    public void canCheckParkingSpaceIsEmpty___EMPTY() {
+        assertEquals(true, standardSpace.isEmpty());
+    }
 }
