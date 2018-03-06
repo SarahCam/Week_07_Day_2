@@ -24,7 +24,12 @@ public class StandardSpaceTest {
         assertEquals(Type.STANDARD, standardSpace.getType());
     }
 
-//    @Test
+    @Test
+    public void canGetCar___Returns_null_whenSpaceIsEmpty() {
+        assertEquals(null, standardSpace.getCar());
+    }
+
+    //    @Test
 //    public void canParkCarInSpace() {
 //        standardSpace.park(standardCar);
 //        assertEquals(standardCar, standardSpace.getCar());
