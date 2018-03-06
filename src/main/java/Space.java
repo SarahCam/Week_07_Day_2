@@ -1,17 +1,23 @@
 public abstract class Space {
 
     private int number;
+    private Type type;
     private Car car;
     private int parkTime;
 
-    public Space(int number) {
+    public Space(int number, Type type) {
         this.number = number;
-        Car car = null;                     // Initialize to a 'null' Car, to indicate the space is empty.
-        int parkTime = 0000;                // Initialize to 00 Hours 00 Minutes.
+        this.type = type;
+        this.car = null;                     // Initialize to a 'null' Car, to indicate the space is empty.
+        this.parkTime = 0000;                // Initialize to 00 Hours 00 Minutes.
     }
 
     public int getNumber() {
         return number;
+    }
+
+    public Type getType() {
+        return type;
     }
 
     public Car getCar() {

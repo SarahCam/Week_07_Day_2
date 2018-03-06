@@ -10,7 +10,7 @@ public class StandardSpaceTest {
 
     @Before
     public void setUp() throws Exception {
-        standardSpace = new StandardSpace(1);
+        standardSpace = new StandardSpace(1, Type.STANDARD);
         standardCar = new Car("SR55 ABC", Type.STANDARD);
     }
 
