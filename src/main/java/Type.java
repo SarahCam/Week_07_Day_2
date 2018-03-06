@@ -1,4 +1,4 @@
-public enum SpaceType {
+public enum Type {
     STANDARD,
     FAMILY,
     DISABLED

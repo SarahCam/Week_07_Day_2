@@ -1,13 +1,13 @@
 public class StandardSpace extends Space {
     
-    private SpaceType type;
+    private Type type;
 
     public StandardSpace(int number) {
         super(number);
-        type = SpaceType.STANDARD;
+        type = Type.STANDARD;
     }
 
-    public SpaceType getType() {
+    public Type getType() {
         return type;
     }
 }

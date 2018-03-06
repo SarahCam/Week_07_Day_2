@@ -6,10 +6,12 @@ import static org.junit.Assert.assertEquals;
 public class StandardSpaceTest {
 
     private StandardSpace standardSpace;
+    private Car standardCar;
 
     @Before
     public void setUp() throws Exception {
         standardSpace = new StandardSpace(1);
+        standardCar = new Car("SR55 ABC", Type.STANDARD);
     }
 
     @Test
@@ -19,7 +21,17 @@ public class StandardSpaceTest {
 
     @Test
     public void canGetType() {
-        assertEquals(SpaceType.STANDARD, standardSpace.getType());
+        assertEquals(Type.STANDARD, standardSpace.getType());
     }
 
+//    @Test
+//    public void canParkCarInSpace() {
+//        standardSpace.park(standardCar);
+//        assertEquals(standardCar, standardSpace.getCar());
+//    }
+
+    //    @Test
+//    public void canCheckIsEmpty() {
+//        assertEquals(true, standardSpace.isEmpty());
+//    }
 }

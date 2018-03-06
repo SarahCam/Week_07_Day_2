@@ -9,4 +9,5 @@ public abstract class Space {
     public int getNumber() {
         return number;
     }
+
 }
