@@ -37,8 +37,13 @@ public class StandardSpaceTest {
         assertEquals(time, standardSpace.getParkTime());
     }
 
-        @Test
+    @Test
     public void canCheckParkingSpaceIsEmpty___EMPTY() {
         assertEquals(true, standardSpace.isEmpty());
+    }
+
+    @Test
+    public void canSendFineLetterIfCarParkedInStandardSpaceMoreThanTwoHours() {
+        assertEquals("FINE LETTER! Exceeded maximum free parking allowance of: 2 hours for standard customers", standardSpace.standardFine());
     }
 }
