@@ -58,4 +58,11 @@ public class CarParkTest {
         assertEquals(Type.DISABLED, space1.getType());
         assertEquals("ALARM BELL! Please move your car, you have no disabled sticker", carPark.alarm(car2, space1));
     }
+
+    @Test
+    public void canSendFineLetterIfBreachMaxFreeStayLimit() {
+        carPark.park(car2, space4, 1400);
+        int currentTime = 1800;
+        assertEquals("FINE LETTER! Exceeded maximum free parking allowance of: 3 hours for families", carPark.fine(space4, currentTime));
+    }
 }

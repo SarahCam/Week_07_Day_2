@@ -32,4 +32,17 @@ public class CarPark {
         }
         else return "NO ALARM BELL";
     }
+
+    public String fine(Space space, int inspectionTime) {
+        if ((space.getType() == Type.FAMILY) && (inspectionTime - space.getParkTime() > 300)){      // Remove hardcoding
+            return space.fine("3 hours for families");                                              // Need to look at this more
+        }
+        else if ((space.getType() == Type.DISABLED) && (inspectionTime - space.getParkTime() > 400)){
+            return space.fine("4 hours for disabled people");
+        }
+        else if (inspectionTime - space.getParkTime() > 200){
+            return space.fine("2 hours for standard customers");
+        }
+        else return "NO FINE";
+    }
 }
