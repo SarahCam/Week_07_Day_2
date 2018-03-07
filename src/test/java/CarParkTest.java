@@ -1,6 +1,9 @@
 import org.junit.Before;
+import org.junit.Test;
 
 import java.util.ArrayList;
+
+import static org.junit.Assert.assertEquals;
 
 public class CarParkTest {
 
@@ -40,5 +43,19 @@ public class CarParkTest {
         carPark = new CarPark("Grove Street Car Park", spaces);
     }
 
+    @Test
+    public void canParkCar() {
+        assertEquals(null, carPark.getCar(space6));
+        carPark.park(car1, space6, 1130);
+        assertEquals(car1, carPark.getCar(space6));
+        assertEquals(1130, carPark.getParkTime(space6));
+    }
 
+    @Test
+    public void canSoundAlarmIfWrongCarTypeInSpace() {
+        carPark.park(car2, space1, 1400);
+        assertEquals(Type.FAMILY, car2.getType());
+        assertEquals(Type.DISABLED, space1.getType());
+        assertEquals("ALARM BELL! Please move your car, you have no disabled sticker", carPark.alarm(car2, space1));
+    }
 }
