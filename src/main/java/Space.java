@@ -38,4 +38,9 @@ public abstract class Space {
     public boolean isEmpty() {
         return car == null;
     }
+
+    // Send a fine letter to the car owner:
+    public String fine(String fineType) {
+        return "FINE LETTER! Exceeded maximum free parking allowance of: " + fineType;
+    }
 }
