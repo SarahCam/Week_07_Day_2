@@ -8,4 +8,8 @@ public class DisabledSpace extends Space implements IRestrictedSpace {
     public String alarm() {
         return "ALARM BELL! Please move your car, you have no disabled sticker";
     }
+
+    public String disabledFine() {
+        return fine("4 hours for disabled people");
+    }
 }

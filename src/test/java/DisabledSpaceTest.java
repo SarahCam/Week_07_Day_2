@@ -16,4 +16,9 @@ public class DisabledSpaceTest {
     public void canTriggerAlarmIfParkedCarDoesNotHaveDisabledSticker() {
         assertEquals("ALARM BELL! Please move your car, you have no disabled sticker", disabledSpace.alarm());
     }
+
+    @Test
+    public void canSendFineLetterIfCarParkedInDisabledSpaceMoreThanThreeHours() {
+        assertEquals("FINE LETTER! Exceeded maximum free parking allowance of: 4 hours for disabled people", disabledSpace.disabledFine());
+    }
 }
